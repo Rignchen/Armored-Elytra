@@ -1,0 +1,13 @@
+{
+    "criteria": {
+        "craft":{
+            "trigger": "recipe_unlocked",
+            "conditions": {
+                "recipe": "elytrarmor:crafter"
+            }
+        }
+    },
+    "rewards": {
+        "function": "elytrarmor:craft/crafter"
+    }
+}

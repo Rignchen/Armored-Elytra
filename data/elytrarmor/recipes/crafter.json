@@ -1,0 +1,25 @@
+{
+    "type": "crafting_shaped",
+    "key": {
+        "F": {
+            "item": "feather"
+        },
+        "S": {
+            "item": "string"
+        },
+        "P": {
+            "item": "phantom_membrane"
+        },
+        "C": {
+            "item": "crafting_table"
+        }
+    },
+    "pattern": [
+        "FSF",
+        "PCP",
+        "F F"
+    ],
+    "result": {
+        "item": "loom"
+    }
+}

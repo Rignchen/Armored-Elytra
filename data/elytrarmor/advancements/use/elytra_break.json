@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "piglins": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "chest": {
+              "items": ["elytra"],
+              "durability": 1,
+              "nbt": "{Tags:[\"armored\"]}"
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "elytrarmor:action/ely_break"
+  }
+}

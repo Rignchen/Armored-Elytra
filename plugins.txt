@@ -1,0 +1,9 @@
+add your crafts there
+    #elytrarmor:use_wrench
+    tag the player with "elytrarmor_dont" to disable default crafts
+executed when you do crafts (before the craft)
+    #elytrarmor:craft
+executed when you do crafts (after the craft)
+    #elytrarmor:crafted
+executed when the player run the give function
+    #elytrarmor:give

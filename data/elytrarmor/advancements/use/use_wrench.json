@@ -1,0 +1,22 @@
+{
+    "criteria": {
+        "use":{
+            "trigger": "item_used_on_block",
+            "conditions": {
+                "item": {
+                    "items":["stick"],
+                    "nbt": "{elytrarmor:1b}"
+                },
+                "location": {
+                    "block": {
+                        "blocks": ["dropper"],
+                        "nbt": "{CustomName:'{\"italic\":false,\"color\":\"black\",\"text\":\"Elytra Sewing Machine\"}'}"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "elytrarmor:action/use_wrench"
+    }
+}
