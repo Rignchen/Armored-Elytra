@@ -11,7 +11,7 @@ data remove block ~ ~ ~ Items[{id:"minecraft:leather_chestplate"}]
 
 #data
 execute unless data storage elytrarmor elytra.display.Name run data modify storage elytrarmor elytra.display.Name set value '{"text":"Leather Elytra","italic":false}'
-data modify storage elytrarmor elytra.AttributeModifiers set value [{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,UUID:[I;-1502880662,165364280,-1338453509,-1199027486],Slot:"chest"}]
+execute unless data storage elytrarmor elytra.AttributeModifiers run data modify storage elytrarmor elytra.AttributeModifiers set value [{AttributeName:"generic.armor",Name:"generic.armor",Amount:3,Operation:0,UUID:[I;-1502880662,165364280,-1338453509,-1199027486],Slot:"chest"}]
 data modify storage elytrarmor elytra.Tags append value "armored"
 data modify storage elytrarmor elytra.CustomModelData set value 53201
 
