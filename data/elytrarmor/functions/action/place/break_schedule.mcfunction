@@ -5,4 +5,4 @@
 execute as @e[type=marker,tag=elytrarmor_crafter,predicate=!elytrarmor:crafter_pos] at @s run function elytrarmor:action/place/break
 
 #self call
-schedule function elytrarmor:action/place/break_schedule 1s
+schedule function elytrarmor:action/place/break_schedule 4t
