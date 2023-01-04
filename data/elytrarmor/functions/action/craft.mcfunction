@@ -1,4 +1,4 @@
-#execute as player at marker when craft elytra (> elytrarmor/function/action/use_wrench)
+#execute as player at marker when craft elytra (> elytrarmor/function/action/crafter)
 #only run if elytra in the crafter
 
 #crafts
