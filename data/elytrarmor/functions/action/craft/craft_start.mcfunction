@@ -1,7 +1,5 @@
 ## function elytrarmor:action/craft/leather
 
-say a
-
 # Lock the next crafts
 scoreboard players set @s smithed.data 1
 

@@ -4,4 +4,4 @@
 advancement revoke @s only elytrarmor:use/unpiglin
 
 #give tag + team
-function elytrarmor:action/power/piglin_add
+execute if score #piglin ely_set matches 1 run function elytrarmor:action/power/piglin_add

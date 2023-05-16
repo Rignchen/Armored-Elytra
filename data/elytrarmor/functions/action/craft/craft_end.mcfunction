@@ -10,5 +10,3 @@ function #elytrarmor:crafted
 # Empty storages
 data remove storage elytrarmor:data elytra
 data remove storage elytrarmor:data armor
-
-say b

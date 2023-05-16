@@ -6,8 +6,9 @@ scoreboard objectives add ely_set dummy "Armored Elytra Settings"
 function elytrarmor:.settings
 #team
 team add piglin
+execute if score #piglin ely_set matches 0 as @e[type=piglin,tag=elytrarmor_pig] run function elytrarmor:action/power/piglin_remove
+execute if score #piglin ely_set matches 0 as @a[tag=elytrarmor_pig] run function elytrarmor:action/power/piglin_remove
 #schedule
 function elytrarmor:action/power/piglin_schedule
-function elytrarmor:action/place/break_schedule
 
 #define storage elytrarmor:data 
