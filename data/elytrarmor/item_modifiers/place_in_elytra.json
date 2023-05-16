@@ -1,0 +1,16 @@
+[
+    {
+        "function": "minecraft:copy_nbt",
+		"ops": [
+			{
+				"op": "merge",
+				"source": "armor",
+				"target": "{}"
+			}
+		],
+		"source": {
+			"type": "storage",
+			"source": "elytrarmor:data"
+		}
+    }
+]

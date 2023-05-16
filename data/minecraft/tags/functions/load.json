@@ -1,3 +1,5 @@
 {
-  "values": ["elytrarmor:load"]
+    "values": [
+        "#load:_private/load"
+    ]
 }

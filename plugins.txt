@@ -1,5 +1,6 @@
 add your crafts there
-    #elytrarmor:use_wrench
+    #smithed.crafter:event/shapeless_recipes
+    #smithed.crafter:event/recipes
 	the score "#temp ely_set" tells you how many items are in the crafter 
     tag the player with "elytrarmor_dont" to disable default crafts
 executed when you craft the elytra (before the craft)

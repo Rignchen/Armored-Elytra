@@ -1,25 +1,15 @@
-#execute as player at crafter when craft diamond elytra (> elytrarmor/function/action/craft)
+## function elytrarmor:action/craft/smithed_shapeless
 
-#plugin
-function #elytrarmor:craft
+# Put into the storage
+data modify storage elytrarmor:data armor set from block ~ ~ ~ Items[{id:"minecraft:diamond_chestplate"}].tag
 
-#put into the storage
-data modify storage elytrarmor elytra set from block ~ ~ ~ Items[{id:"minecraft:diamond_chestplate"}].tag
+# Start of the craft
+function elytrarmor:action/craft/craft_start
 
-#remove the armor
-data remove block ~ ~ ~ Items[{id:"minecraft:diamond_chestplate"}]
+# Data
+execute unless data storage elytrarmor:data armor.display.Name run data modify storage elytrarmor:data armor.display.Name set value '{"text":"Diamond Elytra","italic":false}'
+execute unless data storage elytrarmor:data armor.AttributeModifiers run data modify storage elytrarmor:data armor.AttributeModifiers set value [{AttributeName:"generic.armor",Name:"generic.armor",Amount:8,Operation:0,UUID:[I;-1502880662,165364280,-1338453509,-1199027486],Slot:"chest"},{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:2,Operation:0,UUID:[I;-1502880662,165364280,-1338453509,-1199027486],Slot:"chest"}]
+data modify storage elytrarmor:data armor.CustomModelData set value 537295
 
-#data
-execute unless data storage elytrarmor elytra.display.Name run data modify storage elytrarmor elytra.display.Name set value '{"text":"Diamond Elytra","italic":false}'
-execute unless data storage elytrarmor elytra.AttributeModifiers run data modify storage elytrarmor elytra.AttributeModifiers set value [{AttributeName:"generic.armor",Name:"generic.armor",Amount:8,Operation:0,UUID:[I;-1502880662,165364280,-1338453509,-1199027486],Slot:"chest"},{AttributeName:"generic.armor_toughness",Name:"generic.armor_toughness",Amount:2,Operation:0,UUID:[I;-1502880662,165364280,-1338453509,-1199027486],Slot:"chest"}]
-data modify storage elytrarmor elytra.Tags append value "armored"
-data modify storage elytrarmor elytra.CustomModelData set value 537295
-
-#put elytra back in the crafter
-data modify block ~ ~ ~ Items[{id:"minecraft:elytra"}].tag set from storage elytrarmor elytra
-
-#sound
-playsound block.anvil.use block @a[distance=..20]
-
-#plugin
-function #elytrarmor:crafted
+# End of the craft
+function elytrarmor:action/craft/craft_end

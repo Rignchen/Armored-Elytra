@@ -9,3 +9,5 @@ team add piglin
 #schedule
 function elytrarmor:action/power/piglin_schedule
 function elytrarmor:action/place/break_schedule
+
+#define storage elytrarmor:data 
