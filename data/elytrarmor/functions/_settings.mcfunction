@@ -1,6 +1,4 @@
-#execute as at server when reload (> elytrarmor/function/load)
-
-#Hi welcome, here you can set the datapack's settings
+##Hi welcome, here you can set the datapack's settings
 # 0=no, 1=yes
 
 #does the netherite elytra not burn in lava (default: 1)
