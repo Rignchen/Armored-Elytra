@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "piglins": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "chest": {
+              "components": {
+                "minecraft:custom_data":  {
+                  "elytrarmor_data": ["piglin"]
+                
+                }
+              }
+            }
+          }
+        },
+        "items": [
+          {
+            "components": {
+              "minecraft:custom_data": {
+                "elytrarmor_data": ["piglin"]
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "elytrarmor:action/power/piglin_chest"
+  }
+}

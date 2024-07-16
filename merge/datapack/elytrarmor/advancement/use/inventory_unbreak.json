@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "piglins":{
+            "trigger": "inventory_changed"
+        }
+    },
+    "rewards": {
+        "function": "elytrarmor:action/power/inventory_unbreak"
+    }
+}

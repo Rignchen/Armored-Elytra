@@ -11,11 +11,11 @@ BUILD_FOLDER: str = f"{ROOT}/build"					# Folder where the final datapack and re
 ASSETS_FOLDER: str = f"{ROOT}/assets"				# Folder containing the all assets (textures, sounds, ...) for the datapack
 TEXTURES_FOLDER: str = f"{ASSETS_FOLDER}/textures"	# Folder containing the textures for the datapack
 LIBS_FOLDER: str = f"{ROOT}/libs"					# The libraries are copied to the build destination, and merged with the datapack using Weld
-BUILD_COPY_DESTINATIONS: tuple[list, list] = (["D:/latest_snapshot/world/datapacks"], ["D:/minecraft/snapshot/resourcepacks"])	# Can be empty lists if you don't want to copy the generated files
+BUILD_COPY_DESTINATIONS: tuple[list, list] = (["/mnt/c/users/lilia/AppData/Roaming/.multimc/instances/Fabulously Optimized(2)/.minecraft/saves/Armored Elytra/datapacks"], ["/mnt/c/users/lilia/AppData/Roaming/.multimc/instances/Fabulously Optimized(2)/.minecraft/ressourcepack"])	# Can be empty lists if you don't want to copy the generated files
 
 
 # Dev constants
-HAS_MANUAL: bool = True								# Do the program generate a manual/guide? (WARNING: if an item is malformed in the database, the server log will be flooded on load by the manual hiding the malformed item)
+HAS_MANUAL: bool = False								# Do the program generate a manual/guide? (WARNING: if an item is malformed in the database, the server log will be flooded on load by the manual hiding the malformed item)
 DATABASE_DEBUG: str = f"{ROOT}/database_debug.json"	# Dump of the database for debugging purposes
 CMD_CACHE: str = f"{ROOT}/cmd_cache.json"			# Cache of all items Custom Model Data
 ENABLE_TRANSLATIONS: bool = True					# Will convert all the text components to translate and generate a lang file (WARNING: The algorithm is pretty slow, so it's recommended to disable it when not needed)
@@ -23,12 +23,12 @@ MERGE_LIBS: bool = True								# Make new zip of merged libraries with the datap
 
 
 # Datapack related constants
-AUTHOR: str = "Stoupy51"				# Author(s) name(s) displayed in pack.mcmeta, also used to add convention.debug tag to the players of the same name(s) <-- showing additionnal displays like datapack loading
-DATAPACK_NAME: str = "SimplEnergy"		# Name of the datapack, used for messages and items lore
+AUTHOR: str = "Rignchen"				# Author(s) name(s) displayed in pack.mcmeta, also used to add convention.debug tag to the players of the same name(s) <-- showing additionnal displays like datapack loading
+DATAPACK_NAME: str = "Armored Elytra"		# Name of the datapack, used for messages and items lore
 MINECRAFT_VERSION: str = "1.21"			# Text used when loading the datapack to warn the user when the data version is not right
 DATA_VERSION: int = 3947				# Depending on MC version, given by /data get entity @p DataVersion to check if the datapack is not running in an older version of MC
-VERSION: str = "2.0.0"					# Datapack version in the following mandatory format: major.minor.patch, ex: 1.0.0 or 1.21.615
-NAMESPACE: str = "simplenergy"			# Should be the same you use in the merge folder. Used to namespace functions, tags, etc.
+VERSION: str = "3.0.0"					# Datapack version in the following mandatory format: major.minor.patch, ex: 1.0.0 or 1.21.615
+NAMESPACE: str = "elytrarmor"			# Should be the same you use in the merge folder. Used to namespace functions, tags, etc.
 DATAPACK_FORMAT: int = 48				# Pack format version, see https://minecraft.wiki/w/Pack_format#List_of_data_pack_formats
 RESOURCE_PACK_FORMAT: int = 34			# Resource pack format version, see https://minecraft.wiki/w/Pack_format#List_of_resource_pack_formats
 DESCRIPTION = f"{DATAPACK_NAME} [{VERSION}] by {AUTHOR}"	# Pack description displayed in pack.mcmeta
@@ -41,6 +41,8 @@ DEPENDENCIES: dict[str, dict[str, list[int] | str]] = {
 	
 	# Example for DatapackEnergy >= 1.7.0
 	#"energy": {"version":[1, 7, 0], "name":"DatapackEnergy", "url":"https://github.com/ICY105/DatapackEnergy"},
+    "smithed.custom_block": {"version":[0, 3, 0], "name":"Smithed Custom Block", "url":"https://wiki.smithed.dev/libraries/custom-block/"},
+    "smithed.crafter": {"version":[0, 3, 0], "name":"Smithed Crafter", "url":"https://wiki.smithed.dev/libraries/crafter/"},
 }
 
 

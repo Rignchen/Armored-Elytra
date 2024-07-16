@@ -7,8 +7,6 @@ def main(config: dict) -> dict[str, dict]:
 	database: dict[str, dict] = {}
 
 	# Add your code to set database
-	pass
-
 	# Return database
 	return database
 

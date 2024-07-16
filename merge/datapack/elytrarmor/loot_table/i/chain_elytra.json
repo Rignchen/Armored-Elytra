@@ -1,0 +1,37 @@
+{
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:item",
+            "name": "minecraft:elytra",
+            "functions": [
+              {
+                "function": "minecraft:set_components",
+                "components": {
+                  "minecraft:max_damage": 240,
+                  "minecraft:damage": 0,
+                  "minecraft:item_name": "{\"translate\": \"item.elytrarmor.chain\"}",
+                  "minecraft:attribute_modifiers": [
+                    {
+                      "id": "chain_elytra",
+                      "type": "minecraft:generic.armor",
+                      "amount": 5,
+                      "operation": "add_value",
+                      "slot": "chest"
+                    }
+                  ],
+                  "minecraft:custom_model_data": 537292,
+                  "minecraft:custom_data": {
+                    "elytrarmor": ["armored"]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -1,0 +1,12 @@
+{
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+        "location": {
+            "block": {
+                "blocks": ["dropper"],
+                "nbt": "{CustomName:'{\"italic\":false,\"color\":\"black\",\"text\":\"Elytra Sewing Machine\"}'}"
+            }
+        }
+    }
+}
