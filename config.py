@@ -11,15 +11,15 @@ BUILD_FOLDER: str = f"{ROOT}/build"					# Folder where the final datapack and re
 ASSETS_FOLDER: str = f"{ROOT}/assets"				# Folder containing the all assets (textures, sounds, ...) for the datapack
 TEXTURES_FOLDER: str = f"{ASSETS_FOLDER}/textures"	# Folder containing the textures for the datapack
 LIBS_FOLDER: str = f"{ROOT}/libs"					# The libraries are copied to the build destination, and merged with the datapack using Weld
-BUILD_COPY_DESTINATIONS: tuple[list, list] = (["/mnt/c/users/lilia/AppData/Roaming/.multimc/instances/Fabulously Optimized(2)/.minecraft/saves/Armored Elytra/datapacks"], ["/mnt/c/users/lilia/AppData/Roaming/.multimc/instances/Fabulously Optimized(2)/.minecraft/ressourcepack"])	# Can be empty lists if you don't want to copy the generated files
+BUILD_COPY_DESTINATIONS: tuple[list, list] = (["/mnt/c/users/lilia/AppData/Roaming/.multimc/instances/Fabulously Optimized(2)/.minecraft/saves/Armored Elytra/datapacks"], ["/mnt/c/users/lilia/AppData/Roaming/.multimc/instances/Fabulously Optimized(2)/.minecraft/resourcepacks"])	# Can be empty lists if you don't want to copy the generated files
 
 
 # Dev constants
 HAS_MANUAL: bool = False								# Do the program generate a manual/guide? (WARNING: if an item is malformed in the database, the server log will be flooded on load by the manual hiding the malformed item)
 DATABASE_DEBUG: str = f"{ROOT}/database_debug.json"	# Dump of the database for debugging purposes
 CMD_CACHE: str = f"{ROOT}/cmd_cache.json"			# Cache of all items Custom Model Data
-ENABLE_TRANSLATIONS: bool = True					# Will convert all the text components to translate and generate a lang file (WARNING: The algorithm is pretty slow, so it's recommended to disable it when not needed)
-MERGE_LIBS: bool = True								# Make new zip of merged libraries with the datapack and resource pack using Smithed Weld
+ENABLE_TRANSLATIONS: bool = False					# Will convert all the text components to translate and generate a lang file (WARNING: The algorithm is pretty slow, so it's recommended to disable it when not needed)
+MERGE_LIBS: bool = False								# Make new zip of merged libraries with the datapack and resource pack using Smithed Weld
 
 
 # Datapack related constants
@@ -31,7 +31,8 @@ VERSION: str = "3.0.0"					# Datapack version in the following mandatory format:
 NAMESPACE: str = "elytrarmor"			# Should be the same you use in the merge folder. Used to namespace functions, tags, etc.
 DATAPACK_FORMAT: int = 48				# Pack format version, see https://minecraft.wiki/w/Pack_format#List_of_data_pack_formats
 RESOURCE_PACK_FORMAT: int = 34			# Resource pack format version, see https://minecraft.wiki/w/Pack_format#List_of_resource_pack_formats
-DESCRIPTION = f"{DATAPACK_NAME} [{VERSION}] by {AUTHOR}"	# Pack description displayed in pack.mcmeta
+DESCRIPTION = f"{DATAPACK_NAME} [{VERSION}] by {AUTHOR}.\nPut wings on your armor"	# Pack description displayed in pack.mcmeta
+DATAPACK_ICON_ITEM = "diamond_elytra"
 DEPENDENCIES: dict[str, dict[str, list[int] | str]] = {
 	# Automagically, the datapack will check for the presence of dependencies and their minimum required versions at runtime
 	# The url is used when the dependency is not found to suggest where to get it
@@ -61,10 +62,7 @@ MANUAL_NAME: str = f"{DATAPACK_NAME} Manual"		# Name of the manual, used for the
 MAX_ITEMS_PER_ROW: int = 5							# Max number of items per row in the manual, should not exceed 6
 MAX_ROWS_PER_PAGE: int = 5							# Max number of rows per page in the manual, should not exceed 6
 OPENGL_RESOLUTION: int = 256						# Resolution of the OpenGL renders used in the manual, best value is 256 <--- 256x256
-MANUAL_FIRST_PAGE_TEXT: list[dict] = [{"text":"The following manual will guide you through recipes and energy statistics about devices.", "color":"#505050"}]	# Text for the first page of the manual
-
-
-
+MANUAL_FIRST_PAGE_TEXT: list[dict] = []	# Text for the first page of the manual
 
 # Configuration dictionnary
 configuration = {
@@ -96,6 +94,7 @@ configuration = {
 	"resource_pack_format": RESOURCE_PACK_FORMAT,
 	"manual_name": MANUAL_NAME,
 	"description": DESCRIPTION,
+    "datapack_icon_item": DATAPACK_ICON_ITEM,
 	"dependencies": DEPENDENCIES,
 	"source_lore": SOURCE_LORE,
 	"max_items_per_row": MAX_ITEMS_PER_ROW,
