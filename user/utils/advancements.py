@@ -68,9 +68,53 @@ def global_conventional_advancements(config: dict):
     }
     write_to_file(f"{build_datapack}/data/{namespace}/advancement/{namespace}.json", super_json_dump(datapack_advancement))
 
+def display_advancements(config: dict):
+    build_datapack = config["build_datapack"]
+    namespace = config["namespace"]
+    netherite_elytra = {
+        "display": {
+            "icon": {
+                "id": "minecraft:elytra",
+                "components": {
+                    "minecraft:custom_model_data": 537296
+                }
+            },
+            "title": "Fly saferly",
+            "description": "Craft yourself netherite elytra to fly safer than nether",
+            "frame": "challenge",
+            "show_toast": True,
+            "announce_to_chat": True,
+            "hidden": False
+        },
+        "parent": "minecraft:nether/netherite_armor",
+        "criteria": {
+            "requirement": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                    "items": [
+                        {
+                            "items": [
+                                "minecraft:elytra"
+                            ],
+                            "components": {
+                                "minecraft:custom_model_data": 537296
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "rewards": {
+            "experience": 20
+        }
+    }
+
+
+    write_to_file(f"{build_datapack}/data/{namespace}/advancement/display/netherite_elytra.json", super_json_dump(netherite_elytra))
 
 
 
 
 def generate_advancements(config: dict):
     global_conventional_advancements(config)
+    display_advancements(config)
