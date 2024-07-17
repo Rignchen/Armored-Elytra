@@ -112,9 +112,135 @@ def display_advancements(config: dict):
 
     write_to_file(f"{build_datapack}/data/{namespace}/advancement/display/netherite_elytra.json", super_json_dump(netherite_elytra))
 
+def utilities_advancements(config: dict):
+    build_datapack = config["build_datapack"]
+    namespace = config["namespace"]
+    piglin = {
+        "criteria": {
+            "piglins": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                    "player": {
+                        "equipment": {
+                            "chest": {
+                                "components": {
+                                    "minecraft:custom_data": {
+                                        "elytrarmor_data": ["piglin"]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "items": [
+                        {
+                            "components": {
+                                "minecraft:custom_data": {
+                                    "elytrarmor_data": ["piglin"]
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "rewards": {
+            "function": "elytrarmor:action/power/piglin_chest"
+        }
+    }
+    write_to_file(f"{build_datapack}/data/{namespace}/advancement/utilities/piglin.json", super_json_dump(piglin))
+    unpiglin = {
+        "criteria": {
+            "piglins": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                    "player": [
+                        {
+                            "condition": "inverted",
+                            "term": {
+                                "condition": "minecraft:entity_properties",
+                                "entity": "this",
+                                "predicate": {
+                                    "equipment": {
+                                        "chest": {
+                                            "components": {
+                                                "minecraft:custom_data": {
+                                                    "elytrarmor_data": ["piglin"]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "rewards": {
+            "function": "elytrarmor:action/power/piglin_remove"
+        }
+    }
+    write_to_file(f"{build_datapack}/data/{namespace}/advancement/utilities/unpiglin.json", super_json_dump(unpiglin))
+    inventory_unbreak = {
+        "criteria": {
+            "piglins": {
+                "trigger": "inventory_changed"
+            }
+        },
+        "rewards": {
+            "function": "elytrarmor:action/power/inventory_unbreak"
+        }
+    }
+    write_to_file(f"{build_datapack}/data/{namespace}/advancement/utilities/inventory_unbreak.json", super_json_dump(inventory_unbreak))
+    elytra_break = {
+        "criteria": {
+            "piglins": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                    "player": {
+                        "equipment": {
+                            "chest": {
+                                "items": ["elytra"],
+                                "components": {
+                                    "minecraft:custom_data": {
+                                        "elytrarmor_data": ["unbreak"]
+                                    }
+                                },
+                                "predicates": {
+                                    "minecraft:damage": {
+                                        "durability": 1
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "rewards": {
+            "function": "elytrarmor:action/ely_break"
+        }
+    }
+    write_to_file(f"{build_datapack}/data/{namespace}/advancement/utilities/elytra_break.json", super_json_dump(elytra_break))
+    die = {
+        "criteria": {
+            "die": {
+                "trigger": "entity_killed_player"
+            }
+        },
+        "rewards": {
+            "function": "elytrarmor:action/power/die"
+        }
+    }
+    write_to_file(f"{build_datapack}/data/{namespace}/advancement/utilities/die.json", super_json_dump(die))
+
+
+
+
 
 
 
 def generate_advancements(config: dict):
     global_conventional_advancements(config)
     display_advancements(config)
+    utilities_advancements(config)

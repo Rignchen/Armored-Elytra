@@ -1,7 +1,7 @@
-#execute as at player when he dies (> elytrarmor/advancement/use/die) 
+#execute as at player when he dies (> elytrarmor/advancement/utilities/die) 
 
 #make reusable
-advancement revoke @s only elytrarmor:use/die
+advancement revoke @s only elytrarmor:utilities/die
 
 #make the item invulnerable
 execute if score #unbreak ely_set matches 1 as @e[type=item,distance=..2,predicate=elytrarmor:unbreak] run data modify entity @s Invulnerable set value 1b
