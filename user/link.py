@@ -6,6 +6,7 @@ from python_datapack.utils.io import *
 from .utils.create_craft import create_custom_craft
 from .utils.advancements import generate_advancements
 from .utils.settings import register_settings
+from .utils.abitities.functions import create_functions
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
 def main(config: dict) -> None:
@@ -14,5 +15,6 @@ def main(config: dict) -> None:
 	create_custom_craft(config)
 	generate_advancements(config)
 	register_settings(config)
+	create_functions(config)
 	
 
