@@ -64,10 +64,16 @@ MAX_ROWS_PER_PAGE: int = 5							# Max number of rows per page in the manual, sh
 OPENGL_RESOLUTION: int = 256						# Resolution of the OpenGL renders used in the manual, best value is 256 <--- 256x256
 MANUAL_FIRST_PAGE_TEXT: list[dict] = []	# Text for the first page of the manual
 
+# User settings
+USER_SETTINGS = {
+    "unbreak": ("Netherite elytra doesn't burn in lava ", "ctivate netherite elytra burning in lava", 1),
+    "piglin": ("Golden armor protect you from piglins ", "ctivate golden armor protection from piglins", 0),
+    "break": ("Armor break once the elytra's break ", "ctivate armor breaking once the elytra's break", 1)
+}
+
 # Configuration dictionnary
 configuration = {
 	"ignore_unset": IGNORE_UNSET,
-
 	"merge_folder": MERGE_FOLDER,
 	"manual_path": MANUAL_PATH,
 	"build_folder": BUILD_FOLDER,
@@ -102,5 +108,6 @@ configuration = {
 	"opengl_resolution": OPENGL_RESOLUTION,
 	"manual_first_page_text": MANUAL_FIRST_PAGE_TEXT,
 	"manual_high_resolution": MANUAL_HIGH_RESOLUTION,
+    "user_settings": USER_SETTINGS
 }
 
