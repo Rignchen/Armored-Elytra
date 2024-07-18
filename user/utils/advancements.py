@@ -115,6 +115,7 @@ def display_advancements(config: dict):
 def utilities_advancements(config: dict):
     build_datapack = config["build_datapack"]
     namespace = config["namespace"]
+    version = config["version"]
     piglin = {
         "criteria": {
             "piglins": {
@@ -125,7 +126,7 @@ def utilities_advancements(config: dict):
                             "chest": {
                                 "components": {
                                     "minecraft:custom_data": {
-                                        "elytrarmor_data": ["piglin"]
+                                        f"{namespace}_data": ["piglin"]
                                     }
                                 }
                             }
@@ -135,7 +136,7 @@ def utilities_advancements(config: dict):
                         {
                             "components": {
                                 "minecraft:custom_data": {
-                                    "elytrarmor_data": ["piglin"]
+                                    f"{namespace}_data": ["piglin"]
                                 }
                             }
                         }
@@ -144,7 +145,7 @@ def utilities_advancements(config: dict):
             }
         },
         "rewards": {
-            "function": "elytrarmor:action/power/piglin_chest"
+            "function": f"{namespace}:v{version}/abilities/piglin_chest"
         }
     }
     write_to_file(f"{build_datapack}/data/{namespace}/advancement/utilities/piglin.json", super_json_dump(piglin))
@@ -164,7 +165,7 @@ def utilities_advancements(config: dict):
                                         "chest": {
                                             "components": {
                                                 "minecraft:custom_data": {
-                                                    "elytrarmor_data": ["piglin"]
+                                                    f"{namespace}_data": ["piglin"]
                                                 }
                                             }
                                         }
@@ -177,7 +178,7 @@ def utilities_advancements(config: dict):
             }
         },
         "rewards": {
-            "function": "elytrarmor:action/power/piglin_remove"
+            "function": f"{namespace}:v{version}/abilities/piglin_remove"
         }
     }
     write_to_file(f"{build_datapack}/data/{namespace}/advancement/utilities/unpiglin.json", super_json_dump(unpiglin))
@@ -188,7 +189,7 @@ def utilities_advancements(config: dict):
             }
         },
         "rewards": {
-            "function": "elytrarmor:action/power/inventory_unbreak"
+            "function": f"{namespace}:v{version}/abilities/inventory_unbreak"
         }
     }
     write_to_file(f"{build_datapack}/data/{namespace}/advancement/utilities/inventory_unbreak.json", super_json_dump(inventory_unbreak))
@@ -203,7 +204,7 @@ def utilities_advancements(config: dict):
                                 "items": ["elytra"],
                                 "components": {
                                     "minecraft:custom_data": {
-                                        "elytrarmor_data": ["unbreak"]
+                                        f"{namespace}_data": ["unbreak"]
                                     }
                                 },
                                 "predicates": {
@@ -218,7 +219,7 @@ def utilities_advancements(config: dict):
             }
         },
         "rewards": {
-            "function": "elytrarmor:action/ely_break"
+            "function": f"{namespace}v{version}/abilities/ely_break"
         }
     }
     write_to_file(f"{build_datapack}/data/{namespace}/advancement/utilities/elytra_break.json", super_json_dump(elytra_break))
@@ -229,7 +230,7 @@ def utilities_advancements(config: dict):
             }
         },
         "rewards": {
-            "function": "elytrarmor:action/power/die"
+            "function": f"{namespace}:v{version}/abilities/die"
         }
     }
     write_to_file(f"{build_datapack}/data/{namespace}/advancement/utilities/die.json", super_json_dump(die))
