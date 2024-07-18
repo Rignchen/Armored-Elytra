@@ -7,7 +7,7 @@ def create_functions(config):
 execute at @a[tag={namespace}.pig] as @e[type=piglin,distance=..20,tag=!{namespace}.pig] run function {namespace}:v{version}/abilities/piglin_add
 
 #self call
-execute if score #piglin {namespace}.settings matches 1 run schedule function  {namespace}:v{version}/abilities/piglin_schedule 1s
+execute if score #piglin {namespace}.settings matches 1 run schedule function {namespace}:v{version}/abilities/piglin_schedule 1s
 """)
     write_to_versioned_file(config, "abilities/piglin_add", f"""
 team join piglin
