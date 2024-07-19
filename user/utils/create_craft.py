@@ -12,7 +12,7 @@ f"""
 # Flag for consuming items instead of durability
 execute if data block ~ ~ ~ Items[{'{id:"minecraft:elytra", components:{"minecraft:custom_data":{"'+namespace+'_data":["armored"]}}}'}] run return 1
 
-data modify storage smithed.crafter:input flags append value consome_tools
+data modify storage smithed.crafter:input flags append value consume_tools
 
 # Put into the storage
 data modify storage {namespace}:data armor set from block ~ ~ ~ Items[{'{id:"minecraft:' +name+'_chestplate"}'}].components
