@@ -10,7 +10,6 @@ from .utils.abitities.functions import create_functions
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
 def main(config: dict) -> None:
-	database: dict[str, dict] = config["database"]
 	build_datapack = config["build_datapack"]
 	namespace: str = config["namespace"]
 	version = config["version"]

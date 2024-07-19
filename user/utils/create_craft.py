@@ -1,13 +1,13 @@
 from python_datapack.utils.io import write_to_versioned_file
 from python_datapack.utils.database_helper import DEFAULT_ORE
 def create_custom_craft(config: dict):
-    namespace = config["namespace"]
-    for ore in DEFAULT_ORE.__reversed__():
-        name = ore.value
-        if name == "wooden": name = "leather"
-        if name == "stone": name = "chainmail"
-        from_database = config["database"][f"{name}_elytra"]
-        write_to_versioned_file(config, f"calls/crafts/{name}", 
+	namespace = config["namespace"]
+	for ore in DEFAULT_ORE.__reversed__():
+		name = ore.value
+		if name == "wooden": name = "leather"
+		if name == "stone": name = "chainmail"
+		from_database = config["database"][f"{name}_elytra"]
+		write_to_versioned_file(config, f"calls/crafts/{name}", 
 f"""
 # Flag for consuming items instead of durability
 execute if data block ~ ~ ~ Items[{'{id:"minecraft:elytra", components:{"minecraft:custom_data":{"'+namespace+'_data":["armored"]}}}'}] run return 1

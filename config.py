@@ -42,8 +42,8 @@ DEPENDENCIES: dict[str, dict[str, list[int] | str]] = {
 	
 	# Example for DatapackEnergy >= 1.7.0
 	#"energy": {"version":[1, 7, 0], "name":"DatapackEnergy", "url":"https://github.com/ICY105/DatapackEnergy"},
-    "smithed.custom_block": {"version":[0, 3, 0], "name":"Smithed Custom Block", "url":"https://wiki.smithed.dev/libraries/custom-block/"},
-    "smithed.crafter": {"version":[0, 3, 0], "name":"Smithed Crafter", "url":"https://wiki.smithed.dev/libraries/crafter/"},
+	"smithed.custom_block": {"version":[0, 3, 0], "name":"Smithed Custom Block", "url":"https://wiki.smithed.dev/libraries/custom-block/"},
+	"smithed.crafter": {"version":[0, 3, 0], "name":"Smithed Crafter", "url":"https://wiki.smithed.dev/libraries/crafter/"},
 }
 
 
@@ -66,9 +66,9 @@ MANUAL_FIRST_PAGE_TEXT: list[dict] = []	# Text for the first page of the manual
 
 # User settings
 USER_SETTINGS = {
-    "unbreak": ("Netherite elytra doesn't burn in lava ", "ctivate netherite elytra burning in lava", 1),
-    "piglin": ("Golden armor protect you from piglins (require a reload) ", "ctivate golden armor protection from piglins", 0),
-    "break": ("Armor break once the elytra's break ", "ctivate armor breaking once the elytra's break", 1)
+	"unbreak": ("Netherite elytra doesn't burn in lava ", "ctivate netherite elytra burning in lava", 1),
+	"piglin": ("Golden armor protect you from piglins (require a reload) ", "ctivate golden armor protection from piglins", 0),
+	"break": ("Armor break once the elytra's break ", "ctivate armor breaking once the elytra's break", 1)
 }
 
 # Configuration dictionnary
@@ -100,7 +100,7 @@ configuration = {
 	"resource_pack_format": RESOURCE_PACK_FORMAT,
 	"manual_name": MANUAL_NAME,
 	"description": DESCRIPTION,
-    "datapack_icon_item": DATAPACK_ICON_ITEM,
+	"datapack_icon_item": DATAPACK_ICON_ITEM,
 	"dependencies": DEPENDENCIES,
 	"source_lore": SOURCE_LORE,
 	"max_items_per_row": MAX_ITEMS_PER_ROW,
@@ -108,6 +108,6 @@ configuration = {
 	"opengl_resolution": OPENGL_RESOLUTION,
 	"manual_first_page_text": MANUAL_FIRST_PAGE_TEXT,
 	"manual_high_resolution": MANUAL_HIGH_RESOLUTION,
-    "user_settings": USER_SETTINGS
+	"user_settings": USER_SETTINGS
 }
 
