@@ -7,6 +7,7 @@ from .utils.create_craft import create_custom_craft
 from .utils.advancements import generate_advancements
 from .utils.settings import register_settings
 from .utils.abitities.functions import create_functions
+from .utils.abitities.predicates import generate_predicates
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
 def main(config: dict) -> None:
@@ -18,6 +19,7 @@ def main(config: dict) -> None:
 	generate_advancements(config)
 	register_settings(config)
 	create_functions(config)
+	generate_predicates(config)
 	write_to_file(f"{build_datapack}/data/{namespace}/function/_unload.mcfunction", f"""
 #scores
 scoreboard objectives remove {namespace}.settings
