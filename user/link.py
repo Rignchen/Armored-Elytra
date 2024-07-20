@@ -8,6 +8,7 @@ from .utils.advancements import generate_advancements
 from .utils.settings import register_settings
 from .utils.abitities.functions import create_functions
 from .utils.abitities.predicates import generate_predicates
+from .utils.models import generate_models
 
 # Main function is run just before making finalyzing the build process (zip, headers, lang, ...)
 def main(config: dict) -> None:
@@ -20,6 +21,7 @@ def main(config: dict) -> None:
 	register_settings(config)
 	create_functions(config)
 	generate_predicates(config)
+	generate_models(config)
 	write_to_file(f"{build_datapack}/data/{namespace}/function/_unload.mcfunction", f"""
 #scores
 scoreboard objectives remove {namespace}.settings
