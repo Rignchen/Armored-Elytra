@@ -1,7 +1,0 @@
-{
-    "condition": "minecraft:entity_properties",
-    "entity": "this",
-    "predicate": {
-        "nbt": "{Item:{id: \"minecraft:dropper\", tag: {display: {Name: '{\"italic\":false,\"color\":\"black\",\"text\":\"Elytra Sewing Machine\"}'}}}}"
-    }
-}

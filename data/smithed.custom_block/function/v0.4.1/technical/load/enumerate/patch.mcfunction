@@ -1,1 +1,0 @@
-execute if score #smithed.custom_block.patch load.status matches ..1 unless score #smithed.custom_block.patch load.status matches 1 run function smithed.custom_block:v0.4.1/technical/load/enumerate/set_version
