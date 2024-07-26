@@ -57,7 +57,7 @@ data remove storage {namespace}:data elytra.components.minecraft:enchantements
 data remove storage {namespace}:data elytra.components.minecraft:item_name
 data remove storage {namespace}:data elytra.components.minecraft:lore
 data remove storage {namespace}:data elytra.components.minecraft:attribute_modifiers
-data remove storage {namespace}:data elytra.components.minecraft:custom_data.{namespace}_data
+data remove storage {namespace}:data elytra.components.minecraft:custom_data
 
 #put the elytra back
 summon item_frame ~ ~ ~ {'{UUID:[I;997275056,-1263320765,-1403232826,-334258573]}'}
