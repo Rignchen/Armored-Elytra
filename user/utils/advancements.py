@@ -118,27 +118,18 @@ def utilities_advancements(config: dict):
 	version = config["version"]
 	piglin = {
 		"criteria": {
-			"piglins": {
+			"piglin": {
 				"trigger": "minecraft:inventory_changed",
 				"conditions": {
-					"player": {
-						"equipment": {
-							"chest": {
-								"components": {
-									"minecraft:custom_data": {
-										f"{namespace}_data": ["piglin"]
-									}
-								}
-							}
-						}
-					},
-					"items": [
+					"player": [
 						{
-							"components": {
-								"minecraft:custom_data": {
-									f"{namespace}_data": ["piglin"]
+							"condition": "minecraft:any_of",
+							"terms": [
+								{
+									"condition": "minecraft:reference",
+									"name": "elytrarmor:pig"
 								}
-							}
+							]
 						}
 					]
 				}
@@ -151,26 +142,15 @@ def utilities_advancements(config: dict):
 	write_to_file(f"{build_datapack}/data/{namespace}/advancement/utilities/piglin.json", super_json_dump(piglin))
 	unpiglin = {
 		"criteria": {
-			"piglins": {
+			"unpiglin": {
 				"trigger": "minecraft:inventory_changed",
 				"conditions": {
 					"player": [
 						{
-							"condition": "inverted",
+							"condition": "minecraft:inverted",
 							"term": {
-								"condition": "minecraft:entity_properties",
-								"entity": "this",
-								"predicate": {
-									"equipment": {
-										"chest": {
-											"components": {
-												"minecraft:custom_data": {
-													f"{namespace}_data": ["piglin"]
-												}
-											}
-										}
-									}
-								}
+								"condition": "minecraft:reference",
+								"name": "elytrarmor:pig"
 							}
 						}
 					]
@@ -204,7 +184,7 @@ def utilities_advancements(config: dict):
 								"items": ["elytra"],
 								"components": {
 									"minecraft:custom_data": {
-										f"{namespace}_data": ["unbreak"]
+										f"{namespace}_data": {"unbreak": True}
 									}
 								},
 								"predicates": {

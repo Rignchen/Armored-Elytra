@@ -11,7 +11,7 @@ def generate_predicates(config: dict):
 		"predicate": {
 			"equipment": {
 				"chest": {
-					"components": {
+					"predicates": {
 						"minecraft:custom_data": {
 							f"{namespace}_data": {
 								"piglin": True
