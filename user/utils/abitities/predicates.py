@@ -13,7 +13,9 @@ def generate_predicates(config: dict):
 				"chest": {
 					"components": {
 						"minecraft:custom_data": {
-							f"{namespace}_data":["armored"]
+							f"{namespace}_data": {
+								"piglin": True
+							}
 						}
 					}
 				}
@@ -25,7 +27,7 @@ def generate_predicates(config: dict):
 		"condition": "minecraft:entity_properties",
 		"entity": "this",
 		"predicate": {
-			"nbt": "{Item:{components:{custom_data:{"+namespace+"_data:[\"unbreak\"]}}}}"
+			"nbt": "{Item:{components:{custom_data:{"+namespace+"_data\":{\"unbreak\":1b}}}}}"
 		}
 	}
 	write_to_file(f"{build_datapack}/data/{namespace}/predicate/unbreak.json", super_json_dump(unbreak))

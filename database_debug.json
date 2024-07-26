@@ -2,7 +2,7 @@
 	"leather_elytra": {
 		"id": "minecraft:elytra",
 		"category": "equipment",
-		"custom_data": {"elytrarmor_data": ["armored"],"elytrarmor": {"leather_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"elytrarmor_data": {"armored": true},"elytrarmor": {"leather_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"max_damage": 80,
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"smithed_crafter_command": "function elytrarmor:v3.0.0/calls/crafts/leather","category": "equipment","ingredients": [{"item": "minecraft:elytra"},{"item": "minecraft:leather_chestplate"}]}],
 		"attribute_modifiers": [{"type": "generic.armor","slot": "chest","amount": 3,"operation": "add_value","id": "leather_elytra.generic.armor"}],
@@ -13,7 +13,7 @@
 	"chainmail_elytra": {
 		"id": "minecraft:elytra",
 		"category": "equipment",
-		"custom_data": {"elytrarmor_data": ["armored"],"elytrarmor": {"chainmail_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"elytrarmor_data": {"armored": true},"elytrarmor": {"chainmail_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"max_damage": 240,
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"smithed_crafter_command": "function elytrarmor:v3.0.0/calls/crafts/chainmail","category": "equipment","ingredients": [{"item": "minecraft:elytra"},{"item": "minecraft:chainmail_chestplate"}]}],
 		"attribute_modifiers": [{"type": "generic.armor","slot": "chest","amount": 5,"operation": "add_value","id": "chainmail_elytra.generic.armor"}],
@@ -24,7 +24,7 @@
 	"golden_elytra": {
 		"id": "minecraft:elytra",
 		"category": "equipment",
-		"custom_data": {"elytrarmor_data": ["armored","piglin"],"elytrarmor": {"golden_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"elytrarmor_data": {"armored": true,"piglin": true},"elytrarmor": {"golden_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"max_damage": 112,
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"smithed_crafter_command": "function elytrarmor:v3.0.0/calls/crafts/golden","category": "equipment","ingredients": [{"item": "minecraft:elytra"},{"item": "minecraft:golden_chestplate"}]}],
 		"attribute_modifiers": [{"type": "generic.armor","slot": "chest","amount": 5,"operation": "add_value","id": "golden_elytra.generic.armor"}],
@@ -35,7 +35,7 @@
 	"iron_elytra": {
 		"id": "minecraft:elytra",
 		"category": "equipment",
-		"custom_data": {"elytrarmor_data": ["armored"],"elytrarmor": {"iron_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"elytrarmor_data": {"armored": true},"elytrarmor": {"iron_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"max_damage": 240,
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"smithed_crafter_command": "function elytrarmor:v3.0.0/calls/crafts/iron","category": "equipment","ingredients": [{"item": "minecraft:elytra"},{"item": "minecraft:iron_chestplate"}]}],
 		"attribute_modifiers": [{"type": "generic.armor","slot": "chest","amount": 6,"operation": "add_value","id": "iron_elytra.generic.armor"}],
@@ -46,7 +46,7 @@
 	"diamond_elytra": {
 		"id": "minecraft:elytra",
 		"category": "equipment",
-		"custom_data": {"elytrarmor_data": ["armored"],"elytrarmor": {"diamond_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"elytrarmor_data": {"armored": true},"elytrarmor": {"diamond_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"max_damage": 528,
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"smithed_crafter_command": "function elytrarmor:v3.0.0/calls/crafts/diamond","category": "equipment","ingredients": [{"item": "minecraft:elytra"},{"item": "minecraft:diamond_chestplate"}]}],
 		"attribute_modifiers": [{"type": "generic.armor","slot": "chest","amount": 8,"operation": "add_value","id": "diamond_elytra.generic.armor"},{"type": "generic.armor_toughness","slot": "chest","amount": 2,"operation": "add_value","id": "diamond_elytra.generic.armor_toughness"}],
@@ -57,7 +57,7 @@
 	"netherite_elytra": {
 		"id": "minecraft:elytra",
 		"category": "equipment",
-		"custom_data": {"elytrarmor_data": ["armored","unbreak"],"elytrarmor": {"netherite_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"custom_data": {"elytrarmor_data": {"armored": true,"unbreak": true},"elytrarmor": {"netherite_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
 		"max_damage": 592,
 		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"smithed_crafter_command": "function elytrarmor:v3.0.0/calls/crafts/netherite","category": "equipment","ingredients": [{"item": "minecraft:elytra"},{"item": "minecraft:netherite_chestplate"}]}],
 		"attribute_modifiers": [{"type": "generic.armor","slot": "chest","amount": 8,"operation": "add_value","id": "netherite_elytra.generic.armor"},{"type": "generic.armor_toughness","slot": "chest","amount": 3,"operation": "add_value","id": "netherite_elytra.generic.armor_toughness"},{"type": "generic.knockback_resistance","slot": "chest","amount": 0.1,"operation": "add_value","id": "netherite_elytra.generic.knockback_resistance"}],

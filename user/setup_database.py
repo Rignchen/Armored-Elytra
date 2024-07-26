@@ -17,7 +17,7 @@ def main(config: dict) -> dict[str, dict]:
 			"id": "minecraft:elytra",
 			"category": "equipment",
 			"custom_data": {
-				f"{namespace}_data": ["armored"]
+				f"{namespace}_data": {"armored": True}
 			},
 			"max_damage": VanillaEquipments.CHESTPLATE.value[ore]["durability"],
 			RESULT_OF_CRAFTING: [
@@ -25,8 +25,8 @@ def main(config: dict) -> dict[str, dict]:
 			],
 			"attribute_modifiers": [],
 		}
-		if ore == DEFAULT_ORE.GOLD: database[f"{name}_elytra"]["custom_data"][f"{namespace}_data"].append("piglin")
-		if ore == DEFAULT_ORE.NETHERITE: database[f"{name}_elytra"]["custom_data"][f"{namespace}_data"].append("unbreak")
+		if ore == DEFAULT_ORE.GOLD: database[f"{name}_elytra"]["custom_data"][f"{namespace}_data"].update({"piglin": True})
+		if ore == DEFAULT_ORE.NETHERITE: database[f"{name}_elytra"]["custom_data"][f"{namespace}_data"].update({"unbreak": True})
 		temp = VanillaEquipments.CHESTPLATE.value[ore].copy()
 		del temp["durability"]
 		for key in temp.keys():

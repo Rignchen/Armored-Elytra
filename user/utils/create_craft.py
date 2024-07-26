@@ -10,7 +10,7 @@ def create_custom_craft(config: dict):
 		write_to_versioned_file(config, f"calls/crafts/{name}", 
 f"""
 # Flag for consuming items instead of durability
-execute if data block ~ ~ ~ Items[{'{id:"minecraft:elytra", components:{"minecraft:custom_data":{"'+namespace+'_data":["armored"]}}}'}] run return 1
+execute if data block ~ ~ ~ Items[{'{id:"minecraft:elytra", components:{"minecraft:custom_data":{"'+namespace+'_data":{"armored":1b}}}}'}] run return 1
 
 data modify storage smithed.crafter:input flags append value consume_tools
 
