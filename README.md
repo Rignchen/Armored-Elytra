@@ -13,7 +13,7 @@ The default value is False.
 
 To run the datapack build process, you can only need to run the build.py file.
 This script depends on the following files in the user folder: "link.py", "setup_database.py", "setup_external_database.py".
-These files are described in user/_README.md.
+These files are described in user/README.md.
 
 ## optimize_textures.py
 
