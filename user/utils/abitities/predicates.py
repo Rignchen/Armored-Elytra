@@ -27,7 +27,7 @@ def generate_predicates(config: dict):
 		"condition": "minecraft:entity_properties",
 		"entity": "this",
 		"predicate": {
-			"nbt": "{Item:{components:{custom_data:{"+namespace+"_data\":{\"unbreak\":1b}}}}}"
+			"nbt": "{Item:{components:{custom_data:{\""+namespace+"_data\":{\"unbreak\":1b}}}}}"
 		}
 	}
 	write_to_file(f"{build_datapack}/data/{namespace}/predicate/unbreak.json", super_json_dump(unbreak))
