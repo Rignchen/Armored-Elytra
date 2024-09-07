@@ -51,7 +51,7 @@ def global_conventional_advancements(config: dict):
 			"icon": {
 				"id": icon["id"],
 				"components": {
-					"minecraft:custom_model_data": icon["custom_model_data"]
+					"minecraft:item_model": icon["item_model"]
 				}
 			},
 			"title": datapack_name,
@@ -74,9 +74,9 @@ def display_advancements(config: dict):
 	netherite_elytra = {
 		"display": {
 			"icon": {
-				"id": "minecraft:elytra",
+				"id": "minecraft:netherite_chestplate",
 				"components": {
-					"minecraft:custom_model_data": 537296
+					"item_model": f"{namespace}:netherite_elytra"
 				}
 			},
 			"title": "Fly saferly",
@@ -94,10 +94,10 @@ def display_advancements(config: dict):
 					"items": [
 						{
 							"items": [
-								"minecraft:elytra"
+								"minecraft:netherite_chestplate",
 							],
 							"components": {
-								"minecraft:custom_model_data": 537296
+								"minecraft:item_model": f"{namespace}:netherite_elytra"
 							}
 						}
 					]
@@ -181,7 +181,7 @@ def utilities_advancements(config: dict):
 					"player": {
 						"equipment": {
 							"chest": {
-								"items": ["elytra"],
+								"items": ["leather_chestplate", "chainmail_chestplate", "golden_chestplate", "iron_chestplate", "diamond_chestplate", "netherite_chestplate"],
 								"components": {
 									"minecraft:custom_data": {
 										f"{namespace}_data": {"unbreak": True}

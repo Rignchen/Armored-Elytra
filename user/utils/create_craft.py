@@ -16,27 +16,24 @@ data modify storage smithed.crafter:input flags append value consume_tools
 
 # Put into the storage
 data modify storage {namespace}:data armor set from block ~ ~ ~ Items[{'{id:"minecraft:' +name+'_chestplate"}'}].components
-data modify storage {namespace}:data elytra set from block ~ ~ ~ Items[{'{id:"minecraft:elytra"}'}].components
 
 # Lock the next crafts
 scoreboard players set @s smithed.data 1
 
 # Data
 execute unless data storage {namespace}:data armor.minecraft:item_name run data modify storage {namespace}:data armor.minecraft:item_name set value "{from_database["item_name"]}"
-execute unless data storage {namespace}:data armor.minecraft:attribute_modifiers run data modify storage {namespace}:data armor.minecraft:attribute_modifiers set value {from_database["attribute_modifiers"]}
-execute unless data storage {namespace}:data armor.minecraft:max_damage run data modify storage {namespace}:data armor.minecraft:max_damage set value {from_database["max_damage"]}
 execute if data storage {namespace}:data armor.minecraft:lore run data modify storage {namespace}:data armor.minecraft:lore append value {from_database["lore"]}
 execute unless data storage {namespace}:data armor.minecraft:lore run data modify storage {namespace}:data armor.minecraft:lore set value {from_database["lore"]}
-data modify storage {namespace}:data armor.minecraft:custom_model_data set value {from_database["custom_model_data"]}
+data modify storage {namespace}:data armor.minecraft:item_model set value "{from_database["item_model"]}"
 data modify storage {namespace}:data armor.minecraft:custom_data set value {from_database["custom_data"]}
+data modify storage {namespace}:data armor.minecraft:equippable set value {from_database["equippable"]}
+data modify storage {namespace}:data armor.minecraft:glider set value {from_database["glider"]}
 
 
 # Put elytra back in the crafter
-item replace block ~ ~ ~ container.16 with elytra
-data modify block ~ ~ ~ Items[{'{Slot:16b}'}].components set from storage {namespace}:data armor
+data modify block ~ ~ ~ Items[{'{Slot:16b}'}] set from storage {namespace}:data armor
 
 # Empty storages
-data remove storage {namespace}:data elytra
 data remove storage {namespace}:data armor
 
 """)

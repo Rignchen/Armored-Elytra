@@ -11,7 +11,9 @@ BUILD_FOLDER: str = f"{ROOT}/build"					# Folder where the final datapack and re
 ASSETS_FOLDER: str = f"{ROOT}/assets"				# Folder containing the all assets (textures, sounds, ...) for the datapack
 TEXTURES_FOLDER: str = f"{ASSETS_FOLDER}/textures"	# Folder containing the textures for the datapack
 LIBS_FOLDER: str = f"{ROOT}/libs"					# The libraries are copied to the build destination, and merged with the datapack using Weld
-BUILD_COPY_DESTINATIONS: tuple[list, list] = (["/mnt/c/users/lilia/AppData/Roaming/.multimc/instances/Fabulously Optimized(2)/.minecraft/saves/Armored Elytra/datapacks"], ["/mnt/c/users/lilia/AppData/Roaming/.multimc/instances/Fabulously Optimized(2)/.minecraft/resourcepacks"])	# Can be empty lists if you don't want to copy the generated files
+BUILD_COPY_DESTINATIONS: tuple[list, list] = (
+    ["/mnt/shared/Minecraft/instances/latest/.minecraft/saves/Armored Elytra/datapacks", "D:/Minecraft/instances/latest/.minecraft/saves/Armored Elytra/datapacks"], 
+    ["/mnt/shared/Minecraft/instances/latest/.minecraft/resourcepacks", "D:/Minecraft/instances/latest/.minecraft/resourcepacks"])	# Can be empty lists if you don't want to copy the generated files
 
 
 # Dev constants
@@ -26,11 +28,11 @@ MERGE_LIBS: bool = False								# Make new zip of merged libraries with the data
 AUTHOR: str = "Rignchen"				# Author(s) name(s) displayed in pack.mcmeta, also used to add convention.debug tag to the players of the same name(s) <-- showing additionnal displays like datapack loading
 DATAPACK_NAME: str = "Armored Elytra"		# Name of the datapack, used for messages and items lore
 MINECRAFT_VERSION: str = "1.21"			# Text used when loading the datapack to warn the user when the data version is not right
-DATA_VERSION: int = 3947				# Depending on MC version, given by /data get entity @p DataVersion to check if the datapack is not running in an older version of MC
+DATA_VERSION: int = 4063				# Depending on MC version, given by /data get entity @p DataVersion to check if the datapack is not running in an older version of MC
 VERSION: str = "3.0.0"					# Datapack version in the following mandatory format: major.minor.patch, ex: 1.0.0 or 1.21.615
 NAMESPACE: str = "elytrarmor"			# Should be the same you use in the merge folder. Used to namespace functions, tags, etc.
-DATAPACK_FORMAT: int = 48				# Pack format version, see https://minecraft.wiki/w/Pack_format#List_of_data_pack_formats
-RESOURCE_PACK_FORMAT: int = 34			# Resource pack format version, see https://minecraft.wiki/w/Pack_format#List_of_resource_pack_formats
+DATAPACK_FORMAT: int = 52				# Pack format version, see https://minecraft.wiki/w/Pack_format#List_of_data_pack_formats
+RESOURCE_PACK_FORMAT: int = 37			# Resource pack format version, see https://minecraft.wiki/w/Pack_format#List_of_resource_pack_formats
 DESCRIPTION = f"{DATAPACK_NAME} [{VERSION}] by {AUTHOR}.\nPut wings on your armor"	# Pack description displayed in pack.mcmeta
 DATAPACK_ICON_ITEM = "diamond_elytra"
 DEPENDENCIES: dict[str, dict[str, list[int] | str]] = {
