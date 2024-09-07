@@ -2,45 +2,6 @@ from python_datapack.utils.io import write_to_versioned_file
 
 def create_functions(config):
 	namespace = config["namespace"]
-	version = config["version"]
-	write_to_versioned_file(config, "abilities/piglin_schedule", f"""
-execute at @a[tag={namespace}.pig] as @e[type=piglin,distance=..20,tag=!{namespace}.pig] run function {namespace}:v{version}/abilities/piglin_add
-
-#self call
-execute if score #piglin {namespace}.settings matches 1 run schedule function {namespace}:v{version}/abilities/piglin_schedule 1s
-""")
-	write_to_versioned_file(config, "abilities/piglin_add", f"""
-team join piglin
-tag @s add {namespace}.pig
-""")
-	write_to_versioned_file(config, "abilities/piglin_remove", f"""
-advancement revoke @s only {namespace}:utilities/piglin
-
-team leave @s[team=piglin]
-tag @s remove {namespace}.pig
-""")
-	write_to_versioned_file(config, "abilities/piglin_chest", f"""
-advancement revoke @s only {namespace}:utilities/unpiglin
-
-#give tag + team
-execute if score #piglin {namespace}.settings matches 1 run function {namespace}:v{version}/abilities/piglin_add
-""")
-	write_to_versioned_file(config, "abilities/die", f"""
-#make reusable
-advancement revoke @s only {namespace}:utilities/die
-
-#make the item invulnerable
-execute if score #unbreak {namespace}.settings matches 1 as @e[type=item,distance=..2,predicate={namespace}:unbreak] run data modify entity @s Invulnerable set value 1b
-#remove piglin mark
-execute if entity @s[tag={namespace}.pig] run function {namespace}:v{version}/abilities/piglin_remove
-""")
-	write_to_versioned_file(config, "abilities/inventory_unbreak", f"""
-#make reusable
-advancement revoke @s only {namespace}:utilities/inventory_unbreak
-
-#make the item invulnerable
-execute if score #unbreak {namespace}.settings matches 1 anchored eyes as @e[type=item,distance=..2,predicate={namespace}:unbreak] run data modify entity @s Invulnerable set value 1b
-""")
 	write_to_versioned_file(config, "abilities/ely_break", f"""
 #make reusable
 advancement revoke @s only {namespace}:utilities/elytra_break

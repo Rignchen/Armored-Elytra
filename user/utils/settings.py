@@ -1,4 +1,4 @@
-from python_datapack.utils.io import write_to_versioned_file
+from python_datapack.utils.io import write_to_versioned_file, write_to_file
 
 
 def register_settings(config):
@@ -9,13 +9,6 @@ def register_settings(config):
 	version = config["version"]
 	load = f"""
 scoreboard objectives add {namespace}.settings dummy "Armored Elytra Settings"
-
-#team
-team add piglin
-execute if score #piglin {namespace}.settings matches 0 as @e[type=piglin, tag={namespace}.pig] run function {namespace}:v{version}/abilities/piglin_remove
-execute if score #piglin {namespace}.settings matches 0 as @a[tag={namespace}.pig] run function {namespace}:v{version}/abilities/piglin_remove
-#schedule
-function {namespace}:v{version}/abilities/piglin_schedule
 """
 	settings_function = f"""
 tellraw @s [{'{"text":"['+name+'] Settings:\\n","color":"green"}'}]
@@ -29,10 +22,10 @@ execute if score #{score} {namespace}.settings matches 0 run tellraw @s [{'{"col
 
 """
 	write_to_versioned_file(config, "load/secondary", load, prepend=True)
-	write_to_versioned_file(config, "settings", settings_function)
+	write_to_file(f"{build_datapack}/data/{namespace}/function/settings.mcfunction", settings_function)
 	write_to_versioned_file(config, "update_config", f"""
 $scoreboard players set #$(param) {namespace}.settings $(value)
-function {namespace}:v{version}/settings
+function {namespace}:settings
 """)
 	
 

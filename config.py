@@ -68,8 +68,6 @@ MANUAL_FIRST_PAGE_TEXT: list[dict] = []	# Text for the first page of the manual
 
 # User settings
 USER_SETTINGS = {
-	"unbreak": ("Netherite elytra doesn't burn in lava ", "ctivate netherite elytra burning in lava", 1),
-	"piglin": ("Golden armor protect you from piglins (require a reload) ", "ctivate golden armor protection from piglins", 0),
 	"break": ("Armor break once the elytra's break ", "ctivate armor breaking once the elytra's break", 1)
 }
 

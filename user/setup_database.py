@@ -29,8 +29,6 @@ def main(config: dict) -> dict[str, dict]:
 			},
 			"item_model": f"{namespace}:{name}_elytra"
 		}
-		if ore == DEFAULT_ORE.GOLD: database[f"{name}_elytra"]["custom_data"][f"{namespace}_data"].update({"piglin": True})
-		if ore == DEFAULT_ORE.NETHERITE: database[f"{name}_elytra"]["custom_data"][f"{namespace}_data"].update({"unbreak": True})
 	add_item_name_and_lore_if_missing(config, database)
 	add_private_custom_data_for_namespace(config, database)
 	add_smithed_ignore_vanilla_behaviours_convention(database)

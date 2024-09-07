@@ -116,63 +116,6 @@ def utilities_advancements(config: dict):
 	build_datapack = config["build_datapack"]
 	namespace = config["namespace"]
 	version = config["version"]
-	piglin = {
-		"criteria": {
-			"piglin": {
-				"trigger": "minecraft:inventory_changed",
-				"conditions": {
-					"player": [
-						{
-							"condition": "minecraft:any_of",
-							"terms": [
-								{
-									"condition": "minecraft:reference",
-									"name": "elytrarmor:pig"
-								}
-							]
-						}
-					]
-				}
-			}
-		},
-		"rewards": {
-			"function": f"{namespace}:v{version}/abilities/piglin_chest"
-		}
-	}
-	write_to_file(f"{build_datapack}/data/{namespace}/advancement/utilities/piglin.json", super_json_dump(piglin))
-	unpiglin = {
-		"criteria": {
-			"unpiglin": {
-				"trigger": "minecraft:inventory_changed",
-				"conditions": {
-					"player": [
-						{
-							"condition": "minecraft:inverted",
-							"term": {
-								"condition": "minecraft:reference",
-								"name": "elytrarmor:pig"
-							}
-						}
-					]
-				}
-			}
-		},
-		"rewards": {
-			"function": f"{namespace}:v{version}/abilities/piglin_remove"
-		}
-	}
-	write_to_file(f"{build_datapack}/data/{namespace}/advancement/utilities/unpiglin.json", super_json_dump(unpiglin))
-	inventory_unbreak = {
-		"criteria": {
-			"piglins": {
-				"trigger": "inventory_changed"
-			}
-		},
-		"rewards": {
-			"function": f"{namespace}:v{version}/abilities/inventory_unbreak"
-		}
-	}
-	write_to_file(f"{build_datapack}/data/{namespace}/advancement/utilities/inventory_unbreak.json", super_json_dump(inventory_unbreak))
 	elytra_break = {
 		"criteria": {
 			"piglins": {
@@ -184,7 +127,7 @@ def utilities_advancements(config: dict):
 								"items": ["leather_chestplate", "chainmail_chestplate", "golden_chestplate", "iron_chestplate", "diamond_chestplate", "netherite_chestplate"],
 								"components": {
 									"minecraft:custom_data": {
-										f"{namespace}_data": {"unbreak": True}
+										f"{namespace}_data": {"break": True}
 									}
 								},
 								"predicates": {
@@ -203,17 +146,6 @@ def utilities_advancements(config: dict):
 		}
 	}
 	write_to_file(f"{build_datapack}/data/{namespace}/advancement/utilities/elytra_break.json", super_json_dump(elytra_break))
-	die = {
-		"criteria": {
-			"die": {
-				"trigger": "entity_killed_player"
-			}
-		},
-		"rewards": {
-			"function": f"{namespace}:v{version}/abilities/die"
-		}
-	}
-	write_to_file(f"{build_datapack}/data/{namespace}/advancement/utilities/die.json", super_json_dump(die))
 
 
 
