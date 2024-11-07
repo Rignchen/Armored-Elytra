@@ -1,0 +1,68 @@
+{
+	"leather_elytra": {
+		"id": "minecraft:leather_chestplate",
+		"category": "equipment",
+		"custom_data": {"elytrarmor_data": {"armored": true},"elytrarmor": {"leather_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"smithed_crafter_command": "function elytrarmor:v3.0.0/calls/crafts/leather","category": "equipment","ingredients": [{"item": "minecraft:elytra"},{"item": "minecraft:leather_chestplate"}]}],
+		"glider": {},
+		"equippable": {"slot": "chest","equip_sound": "item.armor.equip_leather","model": "elytrarmor:leather_elytra"},
+		"item_model": "elytrarmor:leather_elytra",
+		"item_name": "{'text': 'Leather Elytra', 'italic': false, 'color': 'white'}",
+		"lore": ["{'text': 'Armored Elytra', 'italic': true, 'color': 'blue'}"]
+	},
+	"chainmail_elytra": {
+		"id": "minecraft:chainmail_chestplate",
+		"category": "equipment",
+		"custom_data": {"elytrarmor_data": {"armored": true},"elytrarmor": {"chainmail_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"smithed_crafter_command": "function elytrarmor:v3.0.0/calls/crafts/chainmail","category": "equipment","ingredients": [{"item": "minecraft:elytra"},{"item": "minecraft:chainmail_chestplate"}]}],
+		"glider": {},
+		"equippable": {"slot": "chest","equip_sound": "item.armor.equip_chainmail","model": "elytrarmor:chainmail_elytra"},
+		"item_model": "elytrarmor:chainmail_elytra",
+		"item_name": "{'text': 'Chainmail Elytra', 'italic': false, 'color': 'white'}",
+		"lore": ["{'text': 'Armored Elytra', 'italic': true, 'color': 'blue'}"]
+	},
+	"golden_elytra": {
+		"id": "minecraft:golden_chestplate",
+		"category": "equipment",
+		"custom_data": {"elytrarmor_data": {"armored": true},"elytrarmor": {"golden_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"smithed_crafter_command": "function elytrarmor:v3.0.0/calls/crafts/golden","category": "equipment","ingredients": [{"item": "minecraft:elytra"},{"item": "minecraft:golden_chestplate"}]}],
+		"glider": {},
+		"equippable": {"slot": "chest","equip_sound": "item.armor.equip_golden","model": "elytrarmor:golden_elytra"},
+		"item_model": "elytrarmor:golden_elytra",
+		"item_name": "{'text': 'Golden Elytra', 'italic': false, 'color': 'white'}",
+		"lore": ["{'text': 'Armored Elytra', 'italic': true, 'color': 'blue'}"]
+	},
+	"iron_elytra": {
+		"id": "minecraft:iron_chestplate",
+		"category": "equipment",
+		"custom_data": {"elytrarmor_data": {"armored": true},"elytrarmor": {"iron_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"smithed_crafter_command": "function elytrarmor:v3.0.0/calls/crafts/iron","category": "equipment","ingredients": [{"item": "minecraft:elytra"},{"item": "minecraft:iron_chestplate"}]}],
+		"glider": {},
+		"equippable": {"slot": "chest","equip_sound": "item.armor.equip_iron","model": "elytrarmor:iron_elytra"},
+		"item_model": "elytrarmor:iron_elytra",
+		"item_name": "{'text': 'Iron Elytra', 'italic': false, 'color': 'white'}",
+		"lore": ["{'text': 'Armored Elytra', 'italic': true, 'color': 'blue'}"]
+	},
+	"diamond_elytra": {
+		"id": "minecraft:diamond_chestplate",
+		"category": "equipment",
+		"custom_data": {"elytrarmor_data": {"armored": true},"elytrarmor": {"diamond_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"smithed_crafter_command": "function elytrarmor:v3.0.0/calls/crafts/diamond","category": "equipment","ingredients": [{"item": "minecraft:elytra"},{"item": "minecraft:diamond_chestplate"}]}],
+		"glider": {},
+		"equippable": {"slot": "chest","equip_sound": "item.armor.equip_diamond","model": "elytrarmor:diamond_elytra"},
+		"item_model": "elytrarmor:diamond_elytra",
+		"item_name": "{'text': 'Diamond Elytra', 'italic': false, 'color': 'white'}",
+		"lore": ["{'text': 'Armored Elytra', 'italic': true, 'color': 'blue'}"]
+	},
+	"netherite_elytra": {
+		"id": "minecraft:netherite_chestplate",
+		"category": "equipment",
+		"custom_data": {"elytrarmor_data": {"armored": true},"elytrarmor": {"netherite_elytra": true},"smithed": {"ignore": {"functionality": true,"crafting": true}}},
+		"result_of_crafting": [{"type": "crafting_shapeless","result_count": 1,"smithed_crafter_command": "function elytrarmor:v3.0.0/calls/crafts/netherite","category": "equipment","ingredients": [{"item": "minecraft:elytra"},{"item": "minecraft:netherite_chestplate"}]}],
+		"glider": {},
+		"equippable": {"slot": "chest","equip_sound": "item.armor.equip_netherite","model": "elytrarmor:netherite_elytra"},
+		"item_model": "elytrarmor:netherite_elytra",
+		"item_name": "{'text': 'Netherite Elytra', 'italic': false, 'color': 'white'}",
+		"lore": ["{'text': 'Armored Elytra', 'italic': true, 'color': 'blue'}"]
+	}
+}
